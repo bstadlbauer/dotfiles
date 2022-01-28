@@ -10,6 +10,7 @@ Prerequisites
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh)
 - [miniforge](https://github.com/conda-forge/miniforge#homebrew)
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k#getting-started) 
+- [fzf](https://github.com/junegunn/fzf#using-homebrew)
 - [coreutils](https://formulae.brew.sh/formula/coreutils)
 
 Installing

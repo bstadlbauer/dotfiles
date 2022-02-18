@@ -81,6 +81,8 @@ plugins=(
   git
   zsh-autosuggestions
   zsh-syntax-highlighting
+  kubectl 
+  docker
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -130,3 +132,8 @@ unset __conda_setup
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Created by `pipx` on 2022-01-31 18:32:48
+export PATH="$PATH:/Users/bstadlbauer/.local/bin"
+
+[[ ! -f ~/.extra.zsh ]] || source ~/.extra.zsh

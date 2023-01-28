@@ -12,6 +12,7 @@ Prerequisites
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k#getting-started) 
 - [fzf](https://github.com/junegunn/fzf#using-homebrew)
 - [coreutils](https://formulae.brew.sh/formula/coreutils)
+- [Karabiner](https://github.com/pqrs-org/Karabiner-Elements) (to map [CTRL to Escape](https://medium.com/@pechyonkin/how-to-map-capslock-to-control-and-escape-on-mac-60523a64022b))
 
 Installing
 ----------

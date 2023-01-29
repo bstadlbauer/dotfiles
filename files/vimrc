@@ -2,6 +2,9 @@
 set number
 syntax on
 
+"Search will be case sensitive if it contains an uppercase letter.
+set smartcase
+
 "Disable arrow keys
 noremap <Up> <Nop>
 noremap <Down> <Nop>

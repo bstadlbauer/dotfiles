@@ -1,5 +1,6 @@
 "Display settings
 set number
+set relativenumber
 syntax on
 
 "Search will be case sensitive if it contains an uppercase letter.

@@ -1,1 +1,7 @@
 source ~/.vimrc
+
+set surround
+
+"NERDtree plugin
+set NERDTree
+map <c-n> :NERDTree<CR>

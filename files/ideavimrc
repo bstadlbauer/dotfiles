@@ -1,6 +1,8 @@
 source ~/.vimrc
 
 set surround
+set ideajoin
+set number
 
 "NERDtree plugin
 set NERDTree

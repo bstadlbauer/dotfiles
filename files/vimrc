@@ -10,3 +10,7 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+
+"Set space as leader
+nnoremap <SPACE> <Nop>
+let mapleader=" "

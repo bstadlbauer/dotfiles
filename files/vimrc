@@ -3,7 +3,9 @@ set number
 syntax on
 
 "Search will be case sensitive if it contains an uppercase letter.
+set ignorecase
 set smartcase
+set incsearch
 
 "Disable arrow keys
 noremap <Up> <Nop>

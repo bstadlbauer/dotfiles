@@ -12,7 +12,9 @@ map <c-n> :NERDTree<CR>
 "Keymaps
 "Run/Debug
 map <leader>dr <Action>(Run)
+map <leader>de <Action>(RunClass)
 map <leader>dd <Action>(Debug)
+map <leader>dc <Action>(DebugClass)
 map <leader>ds <Action>(Stop)
 map <leader>db <Action>(ToggleLineBreakpoint)
 
@@ -33,7 +35,8 @@ map <leader>a <Action>(Annotate)
 map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
 
 "Misc
-map <leader>o <Action>(FileStructurePopup)
+map <leader>os <Action>(FileStructurePopup)
+map <leader>or <Action>(RecentFiles)
 map <leader>s <Action>(SelectInProjectView)
 map <leader>z <Action>(ToggleDistractionFreeMode)
 map <leader><leader> <Action>(SearchEverywhere)

@@ -6,8 +6,8 @@ set number
 
 "NERDtree plugin
 set NERDTree
-map <leader>e :NERDTreeFind<CR>
-map <leader>E :NERDTreeToggle<CR>
+map <leader>e :NERDTreeToggle<CR>
+map <leader>E :NERDTreeFind<CR>
 
 "Keymaps
 "Run/Debug
@@ -35,10 +35,11 @@ map <leader>bo <Action>(MoveEditorToOppositeTabGroup)
 "Windows
 map <c-w>v <Action>(MoveTabRight)
 map <leader>wd <Action>(Unsplit)
+map <leader>h <Action>(HideAllWindows)
 
 "Git
-map <leader>a <Action>(Annotate)
-map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+map <leader>ga <Action>(Annotate)
+map <leader>gh <Action>(Vcs.ShowTabbedFileHistory)
 
 "Misc
 map <leader>os <Action>(FileStructurePopup)

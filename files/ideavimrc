@@ -6,7 +6,8 @@ set number
 
 "NERDtree plugin
 set NERDTree
-map <c-n> :NERDTree<CR>
+map <leader>e :NERDTreeFind<CR>
+map <leader>E :NERDTree<CR>
 
 
 "Keymaps
@@ -26,6 +27,7 @@ map H <Action>(PreviousTab)
 map L <Action>(NextTab)
 map <c-h> <Action>(PreviousProjectWindow)
 map <c-l> <Action>(NextProjectWindow)
+map <leader>/ <Action>(FindInPath)
 
 "Splits
 map <c-w>v <Action>(MoveTabRight)

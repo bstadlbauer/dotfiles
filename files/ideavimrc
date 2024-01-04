@@ -7,8 +7,7 @@ set number
 "NERDtree plugin
 set NERDTree
 map <leader>e :NERDTreeFind<CR>
-map <leader>E :NERDTree<CR>
-
+map <leader>E :NERDTreeToggle<CR>
 
 "Keymaps
 "Run/Debug
@@ -29,8 +28,13 @@ map <c-h> <Action>(PreviousProjectWindow)
 map <c-l> <Action>(NextProjectWindow)
 map <leader>/ <Action>(FindInPath)
 
-"Splits
+"Buffers
+map <leader>bd <Action>(CloseEditor)
+map <leader>bo <Action>(MoveEditorToOppositeTabGroup)
+
+"Windows
 map <c-w>v <Action>(MoveTabRight)
+map <leader>wd <Action>(Unsplit)
 
 "Git
 map <leader>a <Action>(Annotate)

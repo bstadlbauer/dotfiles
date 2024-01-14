@@ -141,3 +141,7 @@ fi
 export PATH="$PATH:/Users/bstadlbauer/.local/bin"
 
 [[ ! -f ~/.extra.zsh ]] || source ~/.extra.zsh
+
+# Should not be used together with chezmoi external files
+# https://www.chezmoi.io/user-guide/include-files-from-elsewhere/#include-a-subdirectory-from-a-url
+export DISABLE_AUTO_UPDATE="true"

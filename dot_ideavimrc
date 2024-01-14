@@ -1,0 +1,53 @@
+source ~/.vimrc
+
+set surround
+set ideajoin
+set number
+
+"NERDtree plugin
+set NERDTree
+map <leader>e :NERDTreeToggle<CR>
+map <leader>E :NERDTreeFind<CR>
+
+"Keymaps
+"Run/Debug
+map <leader>dr <Action>(Run)
+map <leader>de <Action>(RunClass)
+map <leader>dd <Action>(Debug)
+map <leader>dc <Action>(DebugClass)
+map <leader>ds <Action>(Stop)
+map <leader>db <Action>(ToggleLineBreakpoint)
+
+map <leader>cr <Action>(ChooseRunConfiguration)
+map <leader>cd <Action>(ChooseDebugConfiguration)
+
+"Navigation
+map H <Action>(PreviousTab)
+map L <Action>(NextTab)
+map <c-h> <Action>(PreviousProjectWindow)
+map <c-l> <Action>(NextProjectWindow)
+map <leader>/ <Action>(FindInPath)
+
+"Buffers
+map <leader>bd <Action>(CloseEditor)
+map <leader>bo <Action>(MoveEditorToOppositeTabGroup)
+
+"Windows
+map <c-w>v <Action>(MoveTabRight)
+map <leader>wd <Action>(Unsplit)
+map <leader>h <Action>(HideAllWindows)
+
+"Git
+map <leader>ga <Action>(Annotate)
+map <leader>gh <Action>(Vcs.ShowTabbedFileHistory)
+
+"Misc
+map <leader>os <Action>(FileStructurePopup)
+map <leader>or <Action>(RecentFiles)
+map <leader>s <Action>(SelectInProjectView)
+map <leader>z <Action>(ToggleDistractionFreeMode)
+map <leader><leader> <Action>(SearchEverywhere)
+map <leader>t <Action>(ActivateTerminalToolWindow)
+
+"Refactoring
+map <leader>rr <Action>(RenameElement)

@@ -1,0 +1,25 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+brew bundle --no-lock --file=/dev/stdin <<EOF
+
+brew "coreutils"
+brew "fzf"
+brew "htop"
+brew "jq"
+brew "pipx"
+brew "tmux"
+
+# Required for nvim
+brew "lazygit"
+brew "neovim"
+brew "ripgrep"
+
+cask "miniforge"
+cask "karabiner-elements"
+
+EOF
+
+# As per their docs https://github.com/pypa/pipx#on-macos
+pipx ensurepath
+{{ end -}}

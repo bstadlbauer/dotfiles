@@ -1,3 +1,5 @@
 channels:
   - conda-forge
 auto_activate_base: false
+pip_interop_enabled: false
+experimental_sat_error_message: true

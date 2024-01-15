@@ -17,6 +17,10 @@ map <leader>dd <Action>(Debug)
 map <leader>dc <Action>(DebugClass)
 map <leader>ds <Action>(Stop)
 map <leader>db <Action>(ToggleLineBreakpoint)
+map <leader>dh <Action>(Resume)
+map <leader>dj <Action>(StepOver)
+map <leader>dk <Action>(StepInto)
+map <leader>dl <Action>(StepOut)
 
 map <leader>cr <Action>(ChooseRunConfiguration)
 map <leader>cd <Action>(ChooseDebugConfiguration)
@@ -30,12 +34,16 @@ map <leader>/ <Action>(FindInPath)
 
 "Buffers
 map <leader>bd <Action>(CloseEditor)
-map <leader>bo <Action>(MoveEditorToOppositeTabGroup)
 
 "Windows
 map <c-w>v <Action>(MoveTabRight)
 map <leader>wd <Action>(Unsplit)
+map <leader>wo <Action>(MoveEditorToOppositeTabGroup)
 map <leader>h <Action>(HideAllWindows)
+
+"Searching
+map <leader>sn <Action>(NextOccurence)
+map <leader>sp <Action>(PreviousOccurence)
 
 "Git
 map <leader>ga <Action>(Annotate)
@@ -44,7 +52,6 @@ map <leader>gh <Action>(Vcs.ShowTabbedFileHistory)
 "Misc
 map <leader>os <Action>(FileStructurePopup)
 map <leader>or <Action>(RecentFiles)
-map <leader>s <Action>(SelectInProjectView)
 map <leader>z <Action>(ToggleDistractionFreeMode)
 map <leader><leader> <Action>(SearchEverywhere)
 map <leader>t <Action>(ActivateTerminalToolWindow)

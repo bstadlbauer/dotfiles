@@ -47,7 +47,9 @@ map <leader>sp <Action>(PreviousOccurence)
 
 "Git
 map <leader>ga <Action>(Annotate)
+map <leader>gg <Action>(Git.Branches)
 map <leader>gh <Action>(Vcs.ShowTabbedFileHistory)
+map <leader>gk <Action>(CheckinProject)
 
 "Misc
 map <leader>os <Action>(FileStructurePopup)

@@ -4,10 +4,14 @@ set surround
 set ideajoin
 set number
 
+"Plugins
 "NERDtree plugin
 set NERDTree
-map <leader>e :NERDTreeToggle<CR>
+map <leader>e :NERDTreeFocus<CR>
 map <leader>E :NERDTreeFind<CR>
+
+"Quickscope - highlight unique characters to jump to with f/F/t/T
+set quickscope
 
 "Keymaps
 "Run/Debug
@@ -50,6 +54,7 @@ map <leader>ga <Action>(Annotate)
 map <leader>gg <Action>(Git.Branches)
 map <leader>gh <Action>(Vcs.ShowTabbedFileHistory)
 map <leader>gk <Action>(CheckinProject)
+map <leader>gn <Action>(Git.CreateNewBranch)
 
 "Misc
 map <leader>os <Action>(FileStructurePopup)
@@ -60,3 +65,4 @@ map <leader>t <Action>(ActivateTerminalToolWindow)
 
 "Refactoring
 map <leader>rr <Action>(RenameElement)
+map <leader>rm <Action>(Move)

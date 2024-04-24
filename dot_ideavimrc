@@ -10,6 +10,9 @@ set NERDTree
 map <leader>e :NERDTreeFocus<CR>
 map <leader>E :NERDTreeFind<CR>
 
+"Sneak plugin; Since ideavim 2.8.4 part of ideavim
+set sneak
+
 "Quickscope - highlight unique characters to jump to with f/F/t/T
 set quickscope
 
@@ -26,8 +29,8 @@ map <leader>dj <Action>(StepOver)
 map <leader>dk <Action>(StepInto)
 map <leader>dl <Action>(StepOut)
 
-map <leader>cr <Action>(ChooseRunConfiguration)
-map <leader>cd <Action>(ChooseDebugConfiguration)
+map <leader>di <Action>(ChooseRunConfiguration)
+map <leader>do <Action>(ChooseDebugConfiguration)
 
 "Navigation
 map H <Action>(PreviousTab)
@@ -66,3 +69,6 @@ map <leader>t <Action>(ActivateTerminalToolWindow)
 "Refactoring
 map <leader>rr <Action>(RenameElement)
 map <leader>rm <Action>(Move)
+
+"Copilot
+

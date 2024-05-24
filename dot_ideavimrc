@@ -49,8 +49,8 @@ map <leader>wo <Action>(MoveEditorToOppositeTabGroup)
 map <leader>h <Action>(HideAllWindows)
 
 "Searching
-map <leader>sn <Action>(NextOccurence)
-map <leader>sp <Action>(PreviousOccurence)
+map <leader>xn <Action>(NextOccurence)
+map <leader>xp <Action>(PreviousOccurence)
 
 "Git
 map <leader>ga <Action>(Annotate)

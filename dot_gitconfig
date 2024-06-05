@@ -1,0 +1,7 @@
+[user]
+	name = Bernhard Stadlbauer
+	email = 11799671+bstadlbauer@users.noreply.github.com
+[core]
+	autocrlf = input
+[push]
+	autoSetupRemote = true

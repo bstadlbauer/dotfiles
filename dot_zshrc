@@ -92,7 +92,8 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -113,10 +114,17 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Locale
+export LC_ALL=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Open pycharm from the terminal
+export PATH="$PATH:/Applications/PyCharm.app/Contents/MacOS"
 
 # Created by `pipx` on 2022-01-31 18:32:48
 export PATH="$PATH:/Users/bstadlbauer/.local/bin"
@@ -143,3 +151,13 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/bstadlbauer/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bstadlbauer/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/bstadlbauer/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/bstadlbauer/google-cloud-sdk/completion.zsh.inc'; fi
+
+
+# Functions
+dockersize() { docker manifest inspect -v "$1" | jq -c 'if type == "array" then .[] else . end' |  jq -r '[ ( .Descriptor.platform | [ .os, .architecture, .variant, ."os.version" ] | del(..|nulls) | join("/") ), ( [ ( .OCIManifest // .SchemaV2Manifest ).layers[].size ] | add ) ] | join(" ")' | numfmt --to iec --format '%.2f' --field 2 | sort | column -t ; }

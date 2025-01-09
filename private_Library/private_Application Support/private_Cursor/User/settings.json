@@ -1,0 +1,251 @@
+{
+    "testExplorer.useNativeTesting": true,
+    "files.autoSave": "afterDelay",
+    "git.enableSmartCommit": true,
+    "window.autoDetectColorScheme": true,
+    "terminal.integrated.inheritEnv": true,
+    "git.autofetch": true,
+    "python.experiments.enabled": false,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.enablePytestExtra": true,
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "e",
+                "e"
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "b",
+                "d"
+            ],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "w",
+                "o"
+            ],
+            "commands": [
+                "workbench.action.moveEditorToNextGroup"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "w",
+                "d"
+            ],
+            "commands": [
+                "workbench.action.closeEditorsInGroup"
+            ]
+        },
+        {
+            "before": [
+                "H"
+            ],
+            "commands": [
+                "workbench.action.previousEditorInGroup"
+            ]
+        },
+        {
+            "before": [
+                "L"
+            ],
+            "commands": [
+                "workbench.action.nextEditorInGroup"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "z"
+            ],
+            "commands": [
+                "workbench.action.toggleZenMode"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "t"
+            ],
+            "commands": [
+                "workbench.action.terminal.focus"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "e"
+            ],
+            "commands": [
+                "workbench.view.explorer"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "/"
+            ],
+            "commands": [
+                "workbench.action.findInFiles"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "<leader>"
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "h"
+            ],
+            "commands": [
+                "workbench.action.closeSidebar",
+                "workbench.action.closeAuxiliaryBar",
+                "workbench.action.closePanel"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "r"
+            ],
+            "commands": [
+                "testing.reRunLastRun"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "e"
+            ],
+            "commands": [
+                "testing.runAtCursor"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "d"
+            ],
+            "commands": [
+                "testing.debugLastRun"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "c"
+            ],
+            "commands": [
+                "testing.debugAtCursor"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "i"
+            ],
+            "commands": [
+                "workbench.action.debug.selectandstart"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "b"
+            ],
+            "commands": [
+                "editor.debug.action.toggleBreakpoint"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "s"
+            ],
+            "commands": [
+                "workbench.action.debug.stop"
+            ]
+        }
+    ],
+    "vim.useCtrlKeys": true,
+    "editor.minimap.enabled": false,
+    "pythonTestExplorer.testFramework": "pytest",
+    "pythonTestExplorer.outputs.showOutputsOnRun": true,
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "redhat.telemetry.enabled": false,
+    "workbench.editor.enablePreview": false,
+    "liveshare.launcherClient": "visualStudioCode",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.userFileIndexingLimit": -1,
+    "python.languageServer": "Pylance",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "python.analysis.packageIndexDepths": [
+        {
+            "name": "shapely",
+            "depth": 5,
+            "includeAllSymbols": true
+        },
+        {
+            "name": "sklearn",
+            "depth": 2
+        },
+        {
+            "name": "matplotlib",
+            "depth": 2
+        },
+        {
+            "name": "scipy",
+            "depth": 2
+        },
+        {
+            "name": "django",
+            "depth": 2
+        },
+        {
+            "name": "flask",
+            "depth": 2
+        },
+        {
+            "name": "fastapi",
+            "depth": 2
+        }
+    ],
+    "git.confirmSync": false,
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Default Light Modern",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "search.useIgnoreFiles": false
+}

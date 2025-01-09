@@ -1,5 +1,9 @@
 source ~/.vimrc
 
+"Use ctr-O and ctrl-I from the IDE
+sethandler <C-O> a:ide
+sethandler <C-I> a:ide
+
 set surround
 set ideajoin
 set number
@@ -10,11 +14,14 @@ set NERDTree
 map <leader>e :NERDTreeFocus<CR>
 map <leader>E :NERDTreeFind<CR>
 
-"Sneak plugin; Since ideavim 2.8.4 part of ideavim
+"Sneak plugin; Since ideavim 2.8.4dfadjkj part of ideavim
 set sneak
 
 "Quickscope - highlight unique characters to jump to with f/F/t/T
 set quickscope
+
+" Match more complex open/close
+set matchit
 
 "Keymaps
 "Run/Debug
@@ -44,6 +51,7 @@ map <leader>bd <Action>(CloseEditor)
 
 "Windows
 map <c-w>v <Action>(MoveTabRight)
+map <c-w>b <Action>(MoveTabDown)
 map <leader>wd <Action>(Unsplit)
 map <leader>wo <Action>(MoveEditorToOppositeTabGroup)
 map <leader>h <Action>(HideAllWindows)
@@ -70,5 +78,5 @@ map <leader>t <Action>(ActivateTerminalToolWindow)
 map <leader>rr <Action>(RenameElement)
 map <leader>rm <Action>(Move)
 
-"Copilot
-
+"External Tools
+map <leader>cpm <Action>(Tool_External Tools_mypy)

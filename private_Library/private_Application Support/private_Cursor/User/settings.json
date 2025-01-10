@@ -5,7 +5,10 @@
     "window.autoDetectColorScheme": true,
     "terminal.integrated.inheritEnv": true,
     "git.autofetch": true,
-    "python.experiments.enabled": false,
+    "python.experiments.enabled": true,
+    "python.experiments.optInto": [
+        "pythonTestAdapter"
+    ],
     "python.analysis.autoImportCompletions": true,
     "python.analysis.autoFormatStrings": true,
     "python.analysis.enablePytestExtra": true,
@@ -92,6 +95,15 @@
             ],
             "commands": [
                 "workbench.view.explorer"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "E"
+            ],
+            "commands": [
+                "workbench.files.action.showActiveFileInExplorer"
             ]
         },
         {
@@ -192,6 +204,50 @@
             "commands": [
                 "workbench.action.debug.stop"
             ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "c",
+                "f",
+            ],
+            "commands": [
+                "editor.action.formatDocument"
+            ]
+        },
+        {
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.showHover"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "r",
+                "r"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "b",
+                "s"
+            ],
+            "commands": [
+                {
+                    "command": "editor.action.insertLineBreak",
+                    "args": {
+                        "insertSpaces": true,
+                        "tabSize": 4
+                    }
+                }
+            ]
         }
     ],
     "vim.useCtrlKeys": true,
@@ -200,7 +256,7 @@
     "pythonTestExplorer.outputs.showOutputsOnRun": true,
     "python.testing.pytestEnabled": true,
     "python.testing.pytestArgs": [
-        "tests"
+        "-s"
     ],
     "redhat.telemetry.enabled": false,
     "workbench.editor.enablePreview": false,
@@ -209,7 +265,6 @@
     "python.analysis.userFileIndexingLimit": -1,
     "python.languageServer": "Pylance",
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "ms-python.black-formatter",
     "python.analysis.packageIndexDepths": [
         {
             "name": "shapely",
@@ -251,5 +306,10 @@
     "ruff.lint.ignore": [
         "F401",
         "RUF100"
-    ]
+    ],
+    "editor.rulers": [
+        88
+    ],
+    "testing.automaticallyOpenPeekView": "never",
+    "workbench.editor.revealIfOpen": true
 }

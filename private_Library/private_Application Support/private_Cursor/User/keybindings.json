@@ -60,11 +60,6 @@
     {
         "key": "cmd+k",
         "command": "workbench.action.showOutputChannels",
-        "when": "\"focusedView == 'output'\""
-    },
-    {
-        "key": "cmd+k",
-        "command": "workbench.action.showOutputChannels",
         "when": "focusedView == 'output'"
     },
 ]

@@ -235,20 +235,73 @@
         },
         {
             "before": [
-                "<leader>",
-                "b",
-                "s"
+                "<C-w>",
+                "v"
             ],
             "commands": [
-                {
-                    "command": "editor.action.insertLineBreak",
-                    "args": {
-                        "insertSpaces": true,
-                        "tabSize": 4
-                    }
-                }
+                "workbench.action.moveEditorToNextGroup"
             ]
-        }
+        },
+        {
+            "before": [
+                "<C-w>",
+                "p"
+            ],
+            "commands": [
+                "workbench.action.moveEditorToNextGroup"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "g"
+            ],
+            "commands": [
+                "workbench.view.scm"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "c"
+            ],
+            "commands": [
+                "git.checkout"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "x",
+                "q",
+            ],
+            "commands": [
+                "workbench.action.tasks.toggleProblems",
+                "workbench.action.focusActiveEditorGroup"
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "x",
+                "n"
+            ],
+            "commands": [
+                "editor.action.marker.next"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "x",
+                "p"
+            ],
+            "commands": [
+                "editor.action.marker.prev"
+            ]
+        },
     ],
     "vim.useCtrlKeys": true,
     "editor.minimap.enabled": false,
@@ -305,11 +358,30 @@
     "search.useIgnoreFiles": false,
     "ruff.lint.ignore": [
         "F401",
-        "RUF100"
+        "RUF100",
+        "I001,"
     ],
     "editor.rulers": [
         88
     ],
     "testing.automaticallyOpenPeekView": "never",
-    "workbench.editor.revealIfOpen": true
+    "workbench.editor.revealIfOpen": true,
+    "workbench.preferredLightColorTheme": "Monokai Pro",
+    "workbench.preferredDarkColorTheme": "Default Dark Modern",
+    "search.exclude": {
+        ".idea/**": true,
+        ".mypy_cache/**": true,
+        ".seed_data_cache/**": true,
+        ".venv/**": true,
+        "data/**": true,
+        "demo/**": true,
+        "tmp/": true
+    },
+    "makefile.configureOnOpen": false,
+    "ruff.organizeImports": false,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "workbench.iconTheme": "Monokai Pro Monochrome Icons",
+    "editor.lineNumbers": "relative",
+    "git-graph.commitDetailsView.location": "Docked to Bottom",
+    "git-graph.openNewTabEditorGroup": "Beside"
 }

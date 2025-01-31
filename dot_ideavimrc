@@ -62,10 +62,11 @@ map <leader>xp <Action>(PreviousOccurence)
 
 "Git
 map <leader>ga <Action>(Annotate)
-map <leader>gg <Action>(Git.Branches)
+map <leader>gc <Action>(Git.Branches)
 map <leader>gh <Action>(Vcs.ShowTabbedFileHistory)
-map <leader>gk <Action>(CheckinProject)
+map <leader>gg <Action>(CheckinProject)
 map <leader>gn <Action>(Git.CreateNewBranch)
+map <leader>gf <Action>(Git.Fetch)
 
 "Misc
 map <leader>os <Action>(FileStructurePopup)

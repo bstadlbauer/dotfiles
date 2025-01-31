@@ -208,6 +208,16 @@
         {
             "before": [
                 "<leader>",
+                "d",
+                "t",
+            ],
+            "commands": [
+                "python.execInTerminal"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
                 "c",
                 "f",
             ],
@@ -269,6 +279,36 @@
             ],
             "commands": [
                 "git.checkout"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "p"
+            ],
+            "commands": [
+                "git.pull"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "f"
+            ],
+            "commands": [
+                "git.fetch"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "j"
+            ],
+            "commands": [
+                "git-graph.view"
             ]
         },
         {

@@ -67,6 +67,7 @@ map <leader>gh <Action>(Vcs.ShowTabbedFileHistory)
 map <leader>gg <Action>(CheckinProject)
 map <leader>gn <Action>(Git.CreateNewBranch)
 map <leader>gf <Action>(Git.Fetch)
+map <leader>gp <Action>(Vcs.UpdateProject)
 
 "Misc
 map <leader>os <Action>(FileStructurePopup)
@@ -81,3 +82,7 @@ map <leader>rm <Action>(Move)
 
 "External Tools
 map <leader>cpm <Action>(Tool_External Tools_mypy)
+
+"Errors
+map [e <Action>(GotoPreviousError)
+map ]e <Action>(GotoNextError)

@@ -82,6 +82,7 @@ map <leader>rm <Action>(Move)
 
 "External Tools
 map <leader>cpm <Action>(Tool_External Tools_mypy)
+map <leader>cf <Action>(Tool_External Tools_ruff)<Action>(Tool_External Tools_ruff format)
 
 "Errors
 map [e <Action>(GotoPreviousError)

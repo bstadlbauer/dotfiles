@@ -352,7 +352,6 @@
         "-s"
     ],
     "redhat.telemetry.enabled": false,
-    "workbench.editor.enablePreview": false,
     "liveshare.launcherClient": "visualStudioCode",
     "python.analysis.typeCheckingMode": "basic",
     "python.analysis.userFileIndexingLimit": -1,
@@ -391,7 +390,7 @@
     ],
     "git.confirmSync": false,
     "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Default Light Modern",
+    "workbench.colorTheme": "Monokai Classic",
     "[typescriptreact]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
@@ -399,7 +398,7 @@
     "ruff.lint.ignore": [
         "F401",
         "RUF100",
-        "I001,"
+        "I001"
     ],
     "editor.rulers": [
         88
@@ -420,8 +419,9 @@
     "makefile.configureOnOpen": false,
     "ruff.organizeImports": false,
     "diffEditor.hideUnchangedRegions.enabled": true,
-    "workbench.iconTheme": "Monokai Pro Monochrome Icons",
+    "workbench.iconTheme": "Monokai Classic Icons",
     "editor.lineNumbers": "relative",
     "git-graph.commitDetailsView.location": "Docked to Bottom",
-    "git-graph.openNewTabEditorGroup": "Beside"
+    "git-graph.openNewTabEditorGroup": "Beside",
+    "githubPullRequests.pullBranch": "never"
 }

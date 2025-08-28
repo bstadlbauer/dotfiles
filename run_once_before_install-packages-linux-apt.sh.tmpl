@@ -13,7 +13,6 @@ sudo mkdir -p -m 755 /etc/apt/keyrings \
 # APT packages
 sudo apt update
 sudo apt install -y \
-  fzf \
   gh \
   jq \
   tmux \
@@ -44,6 +43,14 @@ if [ ! -d "$HOME/miniforge3" ]; then
     echo "Miniforge3 installation completed."
 else
     echo "~/miniforge3 already exists. Skipping installation."
+fi
+
+# Fzf
+if [ ! -d "$HOME/.fzf" ]; then
+    git clone --depth 1 --branch v0.65.1 https://github.com/junegunn/fzf.git $HOME/.fzf
+    ~/.fzf/install
+else
+    echo "~/.fzf already exists. Skipping installation."
 fi
 
 # Make zsh the default shell

@@ -71,6 +71,10 @@ map <leader>gp <Action>(Vcs.UpdateProject)
 
 "Misc
 map <leader>os <Action>(FileStructurePopup)
+map <leader>og <Action>(GotoSymbol)
+map <leader>of <Action>(GotoFile)
+map <leader>oc <Action>(GotoClass)
+map <leader>oe <Action>(GotoUrlAction)
 map <leader>or <Action>(RecentFiles)
 map <leader>z <Action>(ToggleDistractionFreeMode)
 map <leader><leader> <Action>(SearchEverywhere)

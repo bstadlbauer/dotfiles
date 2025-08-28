@@ -4,6 +4,7 @@
 brew bundle --no-lock --file=/dev/stdin <<EOF
 
 tap "homebrew/cask-fonts"
+tap "FelixKratz/formulae"
 
 brew "coreutils"
 brew "fzf"
@@ -15,15 +16,20 @@ brew "tmux"
 brew "tree"
 brew "watch"
 
+# From FelixKratz/formulae
+brew "borders"
+
 # Required for nvim
 brew "lazygit"
 brew "neovim"
 brew "ripgrep"
 
+# Tools
 cask "font-jetbrains-mono-nerd-font"
 cask "karabiner-elements"
 cask "miniforge"
 cask "rectangle"
+cask nikitabobko/tap/aerospace
 
 EOF
 

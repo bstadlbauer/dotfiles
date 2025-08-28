@@ -35,3 +35,8 @@ EOF
 # As per their docs https://github.com/pypa/pipx#on-macos
 pipx ensurepath
 {{ end -}}
+
+
+# Disable window opening animations
+defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
+

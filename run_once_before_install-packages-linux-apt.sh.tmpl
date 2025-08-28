@@ -1,0 +1,51 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/bash
+
+# Github CLI key
+sudo mkdir -p -m 755 /etc/apt/keyrings \
+  && out=$(mktemp) \
+  && wget -nv -O$out https://cli.github.com/packages/githubcli-archive-keyring.gpg \
+  && cat $out | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null \
+  && sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg \
+  && sudo mkdir -p -m 755 /etc/apt/sources.list.d \
+  && echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+
+# APT packages
+sudo apt update
+sudo apt install -y \
+  fzf \
+  gh \
+  jq \
+  tmux \
+  tree \
+  zsh \
+  pipx
+
+
+# Oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Powerlevel-10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+
+# UV
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+
+# Pipx setup, as per their docs https://github.com/pypa/pipx#on-macos
+pipx ensurepath
+
+# Conda installation
+if [ ! -d "$HOME/miniforge3" ]; then
+    echo "~/miniforge3 not found. Installing Miniforge3..."
+    wget -O Miniforge3.sh "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+    bash Miniforge3.sh -b -p $HOME/miniforge3
+    rm Miniforge3-*
+    echo "Miniforge3 installation completed."
+else
+    echo "~/miniforge3 already exists. Skipping installation."
+fi
+
+# Make zsh the default shell
+sudo chsh -s $(which zsh) $USER
+{{ end -}}

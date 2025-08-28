@@ -77,7 +77,7 @@ map <leader>oc <Action>(GotoClass)
 map <leader>oe <Action>(GotoUrlAction)
 map <leader>or <Action>(RecentFiles)
 map <leader>z <Action>(ToggleDistractionFreeMode)
-map <leader><leader> <Action>(SearchEverywhere)
+map <leader><leader> <Action>(GotoFile)
 map <leader>t <Action>(ActivateTerminalToolWindow)
 
 "Refactoring

@@ -81,7 +81,7 @@ automatically-unhide-macos-hidden-apps = false
     # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
     # You can uncomment the following lines to open up terminal with alt + enter shortcut
     # (like in i3)
-    alt-t = '''exec-and-forget osascript -e '
+    alt-i = '''exec-and-forget osascript -e '
     tell application "iTerm"
         create window with profile "temporary_terminal"
     end tell'
@@ -197,3 +197,43 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-k = ['join-with up', 'mode main']
     alt-shift-l = ['join-with right', 'mode main']
 
+[[on-window-detected]]
+    if.app-id = 'company.thebrowser.Browser'
+    run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+    if.app-id = 'com.google.Chrome'
+    run = 'move-node-to-workspace 2'
+
+[[on-window-detected]]
+    if.app-id = 'com.jetbrains.pycharm'
+    run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
+    if.app-id = 'com.googlecode.iterm2'
+    if.window-title-regex-substring = 'main-iterm-window'
+    run = 'move-node-to-workspace 5'
+
+[[on-window-detected]]
+    if.app-id = 'com.tinyspeck.slackmacgap'
+    run = 'move-node-to-workspace 8'
+
+[[on-window-detected]]
+    if.app-id = 'md.obsidian'
+    run = 'move-node-to-workspace 9'
+
+[workspace-to-monitor-force-assignment]
+# Example:
+#    1 = 1                            # Monitor sequence number from left to right. 1-based indexing
+#    2 = 'main'                       # Main monitor
+#    3 = 'secondary'                  # Non-main monitor in case when there are only two monitors
+#    4 = 'built-in'                   # Case insensitive regex substring
+#    5 = '^built-in retina display$'  # Case insensitive regex match
+#    6 = ['secondary', 'dell']        # You can specify multiple patterns.
+#    2 = 'main'                       # Main monitor
+#    3 = 'secondary'                  # Non-main monitor in case when there are only two monitors
+#    4 = 'built-in'                   # Case insensitive regex substring
+#    5 = '^built-in retina display$'  # Case insensitive regex match
+#    6 = ['secondary', 'dell']        # You can specify multiple patterns.
+    2 = 'secondary'                   
+ 

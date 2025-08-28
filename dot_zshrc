@@ -164,3 +164,4 @@ dockersize() { docker manifest inspect -v "$1" | jq -c 'if type == "array" then 
 export PATH="/Users/bstadlbauer/.pixi/bin:$PATH"
 
 alias claude="/Users/bstadlbauer/.claude/local/claude"
+export PATH="$HOME/bin:$PATH"

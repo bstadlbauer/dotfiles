@@ -86,7 +86,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-enter = '''exec-and-forget osascript -e '
     tell application "iTerm"
         activate
-        create window with default profile
+        create window with profile "temporary_terminal"
     end tell'
     '''
 

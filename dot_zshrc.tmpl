@@ -130,6 +130,14 @@ export LC_CTYPE=en_US.UTF-8
 # https://www.chezmoi.io/user-guide/include-files-from-elsewhere/#include-a-subdirectory-from-a-url
 export DISABLE_AUTO_UPDATE="true"
 
+# Functions
+dockersize() { docker manifest inspect -v "$1" | jq -c 'if type == "array" then .[] else . end' |  jq -r '[ ( .Descriptor.platform | [ .os, .architecture, .variant, ."os.version" ] | del(..|nulls) | join("/") ), ( [ ( .OCIManifest // .SchemaV2Manifest ).layers[].size ] | add ) ] | join(" ")' | numfmt --to iec --format '%.2f' --field 2 | sort | column -t ; }
+
+# Path extensions
+export PATH="$HOME/.pixi/bin:$PATH"
+export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$HOME/.local/bin"
+
 {{ if eq .chezmoi.os "darwin" }}
 # Mac specific config
 # Open pycharm from the terminal
@@ -137,6 +145,10 @@ export PATH="$PATH:/Applications/PyCharm.app/Contents/MacOS"
 
 # Claude
 alias claude="/Users/bstadlbauer/.claude/local/claude"
+
+# Vim default
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 # Conda
 BREW_PREFIX=$(brew --prefix)
@@ -163,19 +175,6 @@ if [ -f '/Users/bstadlbauer/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bst
 if [ -f '/Users/bstadlbauer/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/bstadlbauer/google-cloud-sdk/completion.zsh.inc'; fi
 
 {{ end }}
-
-# Linux specific config
 {{ if eq .chezmoi.os "linux" }}
-
+# Linux specific config
 {{ end }}
-
-
-
-
-# Functions
-dockersize() { docker manifest inspect -v "$1" | jq -c 'if type == "array" then .[] else . end' |  jq -r '[ ( .Descriptor.platform | [ .os, .architecture, .variant, ."os.version" ] | del(..|nulls) | join("/") ), ( [ ( .OCIManifest // .SchemaV2Manifest ).layers[].size ] | add ) ] | join(" ")' | numfmt --to iec --format '%.2f' --field 2 | sort | column -t ; }
-
-# Path extensions
-export PATH="$HOME/.pixi/bin:$PATH"
-export PATH="$PATH:$HOME/bin"
-export PATH="$PATH:$HOME/.local/bin"

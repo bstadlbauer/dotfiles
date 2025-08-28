@@ -1,9 +1,11 @@
-set -g prefix C-a
-unbind C-b
-bind C-a send-prefix
-
-# Beginning of a line
-bind a send-prefix
+{{ if eq .chezmoi.os "darwing" }}
+  set -g prefix C-a
+  unbind C-b
+  bind C-a send-prefix
+  
+  # Beginning of a line
+  bind a send-prefix
+{{ end }}
 
 set-option -g message-style bg=black,fg=green
 set-option -g status-style bg=black

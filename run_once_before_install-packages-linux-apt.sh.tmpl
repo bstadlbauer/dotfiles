@@ -19,8 +19,7 @@ sudo apt install -y \
   locales-all \
   tmux \
   tree \
-  zsh \
-  pipx
+  zsh
 
 # Locales
 sudo locale-gen en_US.UTF-8
@@ -34,10 +33,6 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-
 
 # UV
 curl -LsSf https://astral.sh/uv/install.sh | sh
-
-
-# Pipx setup, as per their docs https://github.com/pypa/pipx#on-macos
-pipx ensurepath
 
 # Conda installation
 if [ ! -d "$HOME/miniforge3" ]; then

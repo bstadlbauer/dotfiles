@@ -4,3 +4,6 @@
 
 -- Use basedpyright instead of pyright for Python LSP
 vim.g.lazyvim_python_lsp = "basedpyright"
+
+-- Show vertical line at column 88
+vim.opt.colorcolumn = "88"

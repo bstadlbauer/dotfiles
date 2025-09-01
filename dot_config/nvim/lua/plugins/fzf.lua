@@ -1,6 +1,30 @@
 return {
   {
     "ibhagwan/fzf-lua",
+    keys = {
+      -- Override the default <leader><leader> to use monorepo root
+      {
+        "<leader><leader>",
+        function()
+          local util = require("lspconfig.util")
+          local current_file = vim.fn.expand("%:p")
+          local root = util.root_pattern("uv.lock", ".git")(current_file) or vim.fn.getcwd()
+          require("fzf-lua").files({ cwd = root })
+        end,
+        desc = "Find Files (Root Dir)",
+      },
+      -- Also override live_grep to use monorepo root
+      {
+        "<leader>/",
+        function()
+          local util = require("lspconfig.util")
+          local current_file = vim.fn.expand("%:p")
+          local root = util.root_pattern("uv.lock", ".git")(current_file) or vim.fn.getcwd()
+          require("fzf-lua").live_grep({ cwd = root })
+        end,
+        desc = "Grep (Root Dir)",
+      },
+    },
     opts = {
       defaults = {
         -- Change keybindings for fzf actions

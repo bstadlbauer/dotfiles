@@ -1,18 +1,4 @@
 return {
-  -- Add telescope configuration for better reference searching
-  {
-    "nvim-telescope/telescope.nvim",
-    opts = {
-      defaults = {
-        -- Search from monorepo root by default
-        cwd = function()
-          local util = require("lspconfig.util")
-          local root = util.root_pattern(".git")(vim.fn.expand("%:p"))
-          return root or vim.fn.getcwd()
-        end,
-      },
-    },
-  },
   {
     "neovim/nvim-lspconfig",
     opts = {
@@ -23,10 +9,7 @@ return {
             local util = require("lspconfig.util")
             -- Look for the monorepo root by finding common monorepo markers
             -- Adjust these patterns based on your monorepo structure
-            local root = util.root_pattern(
-              ".git",           -- Git repository root
-            )(fname)
-            
+            local root = util.root_pattern("uv.lock")(fname)
             -- If no root found, fall back to current working directory
             return root or vim.fn.getcwd()
           end,
@@ -56,12 +39,12 @@ return {
             local util = require("lspconfig.util")
             -- Look for monorepo root markers
             return util.root_pattern(
-              "pnpm-workspace.yaml",  -- pnpm monorepo
-              "lerna.json",          -- Lerna monorepo
-              "nx.json",             -- Nx monorepo
-              "rush.json",           -- Rush monorepo
-              ".git",                -- Git root as fallback
-              "package.json"         -- Fallback to package.json
+              "pnpm-workspace.yaml", -- pnpm monorepo
+              "lerna.json", -- Lerna monorepo
+              "nx.json", -- Nx monorepo
+              "rush.json", -- Rush monorepo
+              ".git", -- Git root as fallback
+              "package.json" -- Fallback to package.json
             )(fname) or vim.fn.getcwd()
           end,
         },
@@ -75,7 +58,7 @@ return {
       local on_attach = opts.on_attach or function() end
       opts.on_attach = function(client, bufnr)
         on_attach(client, bufnr)
-        
+
         -- Override the workspace folders to use monorepo root
         if client.config.root_dir then
           local workspace_folders = {

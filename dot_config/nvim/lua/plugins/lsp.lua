@@ -7,6 +7,7 @@ return {
           settings = {
             basedpyright = {
               analysis = {
+                disgnosticMode = "openFilesOnly",
                 typeCheckingMode = "standard",
                 autoSearchPaths = true,
                 useLibraryCodeForTypes = true,
@@ -44,3 +45,4 @@ return {
     },
   },
 }
+

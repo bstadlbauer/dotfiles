@@ -30,12 +30,13 @@ cask "miniforge"
 cask "nikitabobko/tap/aerospace"
 
 EOF
-{{ end -}}
-
 
 # Disable window opening animations
 defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
 
 # Make sure borders is started
 brew services start borders
+
+uv tool install ruff
+{{ end -}}
 

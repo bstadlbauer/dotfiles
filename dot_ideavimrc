@@ -42,8 +42,8 @@ map <leader>do <Action>(ChooseDebugConfiguration)
 "Navigation
 map H <Action>(PreviousTab)
 map L <Action>(NextTab)
-map <c-h> <Action>(PreviousProjectWindow)
-map <c-l> <Action>(NextProjectWindow)
+map <c-h> <Action>(PrevSplitter)
+map <c-l> <Action>(NextSplitter)
 map <leader>/ <Action>(FindInPath)
 
 "Buffers
@@ -83,6 +83,10 @@ map <leader>t <Action>(ActivateTerminalToolWindow)
 "Refactoring
 map <leader>rr <Action>(RenameElement)
 map <leader>rm <Action>(Move)
+
+"Code actions
+map <leader>ca <Action>(ShowIntentionActions)
+map <leader>cd <Action>(ShowErrorDescription)
 
 "External Tools
 map <leader>cpm <Action>(Tool_External Tools_mypy)

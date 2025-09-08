@@ -201,6 +201,8 @@ else
     fi
 fi
 unset __conda_setup
+
+export MAMBA_ROOT_PREFIX=$HOME/miniforge3
 if [ -f "$HOME/miniforge3/etc/profile.d/mamba.sh" ]; then
     . "$HOME/miniforge3/etc/profile.d/mamba.sh"
 fi

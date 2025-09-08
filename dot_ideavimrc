@@ -69,15 +69,16 @@ map <leader>gn <Action>(Git.CreateNewBranch)
 map <leader>gf <Action>(Git.Fetch)
 map <leader>gp <Action>(Vcs.UpdateProject)
 
-"Misc
-map <leader>os <Action>(FileStructurePopup)
-map <leader>og <Action>(GotoSymbol)
-map <leader>of <Action>(GotoFile)
-map <leader>oc <Action>(GotoClass)
-map <leader>oe <Action>(GotoUrlAction)
-map <leader>or <Action>(RecentFiles)
-map <leader>z <Action>(ToggleDistractionFreeMode)
+"Search
+map <leader>so <Action>(FileStructurePopup)
+map <leader>ss <Action>(GotoSymbol)
+map <leader>sc <Action>(GotoClass)
+map <leader>se <Action>(GotoUrlAction)
+map <leader>sr <Action>(RecentFiles)
 map <leader><leader> <Action>(GotoFile)
+
+"Misc
+map <leader>z <Action>(ToggleDistractionFreeMode)
 map <leader>t <Action>(ActivateTerminalToolWindow)
 
 "Refactoring

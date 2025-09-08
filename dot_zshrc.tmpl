@@ -174,6 +174,8 @@ fi
 # <<< conda initialize <<<
 
 # gcloud
+# Allows gcloud to access numpy
+export CLOUDSDK_PYTHON_SITEPACKAGES=1
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/bstadlbauer/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bstadlbauer/google-cloud-sdk/path.zsh.inc'; fi
 

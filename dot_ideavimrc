@@ -75,6 +75,7 @@ map <leader>ss <Action>(GotoSymbol)
 map <leader>sc <Action>(GotoClass)
 map <leader>se <Action>(GotoUrlAction)
 map <leader>sr <Action>(RecentFiles)
+map <leader>sl <Action>(RecentLocations)
 map <leader><leader> <Action>(GotoFile)
 
 "Misc

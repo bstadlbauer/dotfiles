@@ -6,6 +6,12 @@
   # Beginning of a line
   bind a send-prefix
 {{ end }}
+# Clear history with k
+bind C-k clear-history
+
+# Scrollback size of 10k
+set-option -g history-limit 10000
+
 set-option -g message-style bg=black,fg=green
 set-option -g status-style bg=black
 

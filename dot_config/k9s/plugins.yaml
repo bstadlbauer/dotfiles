@@ -1,0 +1,24 @@
+plugins:
+    jqlogs:
+      shortCut: Ctrl-J
+      confirm: false
+      description: "Logs (jq)"
+      scopes:
+        - pod
+      command: sh
+      background: false
+      args:
+        - -c
+        - "kubectl logs -f $NAME -n $NAMESPACE --context $CONTEXT | jq -R '. as $line | try (fromjson | \"\\(.severity):
+  \\(.message)\") catch $line'"
+    jqlogsmultiline:
+      shortCut: Ctrl-L
+      confirm: false
+      description: "Logs (JSON)"
+      scopes:
+        - pod
+      command: sh
+      background: false
+      args:
+        - -c
+        - "kubectl logs -f $NAME -n $NAMESPACE --context $CONTEXT |jq -SR '. as $line | try (fromjson) catch $line'"

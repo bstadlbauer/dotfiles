@@ -3,7 +3,6 @@
 
 brew bundle --file=/dev/stdin <<EOF
 
-tap "homebrew/cask-fonts"
 tap "FelixKratz/formulae"
 
 brew "coreutils"
@@ -24,8 +23,10 @@ brew "lazygit"
 brew "neovim"
 brew "ripgrep"
 
+# Font for p10k
+cask "font-hack-nerd-font"
+
 # Tools
-cask "font-jetbrains-mono-nerd-font"
 cask "karabiner-elements"
 cask "miniforge"
 cask "nikitabobko/tap/aerospace"

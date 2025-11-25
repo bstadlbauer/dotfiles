@@ -55,11 +55,11 @@
             "fn_function_keys": [
                 {
                     "from": { "key_code": "f1" },
-                    "to": [{ "key_code": "f1" }]
+                    "to": [{ "key_code": "vk_consumer_brightness_down" }]
                 },
                 {
                     "from": { "key_code": "f2" },
-                    "to": [{ "key_code": "f2" }]
+                    "to": [{ "key_code": "vk_consumer_brightness_up" }]
                 },
                 {
                     "from": { "key_code": "f3" },
@@ -87,15 +87,15 @@
                 },
                 {
                     "from": { "key_code": "f10" },
-                    "to": [{ "key_code": "f10" }]
+                    "to": [{ "key_code": "mute" }]
                 },
                 {
                     "from": { "key_code": "f11" },
-                    "to": [{ "key_code": "f11" }]
+                    "to": [{ "key_code": "volume_decrement" }]
                 },
                 {
                     "from": { "key_code": "f12" },
-                    "to": [{ "key_code": "f12" }]
+                    "to": [{ "key_code": "volume_increment" }]
                 }
             ],
             "name": "Default profile",

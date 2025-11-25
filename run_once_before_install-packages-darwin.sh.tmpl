@@ -25,7 +25,7 @@ brew "neovim"
 brew "ripgrep"
 
 # Font for p10k
-cask "font-hack-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
 
 # Tools
 cask "karabiner-elements"
@@ -36,6 +36,10 @@ EOF
 
 # Disable window opening animations
 defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
+
+# Speed up key repeat
+defaults write -g InitialKeyRepeat -float 15.0 # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -float 2.0 # normal minimum is 2 (30 ms)
 
 # Make sure borders is started
 brew services start borders

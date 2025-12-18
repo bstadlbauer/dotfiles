@@ -2,14 +2,14 @@
   "Profiles" : [
     {
       "Use Separate Colors for Light and Dark Mode" : false,
-      "Name" : "bstadlbauer",
       "Rewritable" : true,
+      "Name" : "bstadlbauer",
       "Guid" : "AF4C0918-1D8B-4D4E-94EE-A380A8CEB01D"
     },
     {
       "Use Separate Colors for Light and Dark Mode" : false,
-      "Name" : "temporary_terminal",
       "Rewritable" : true,
+      "Name" : "temporary_terminal",
       "Guid" : "FF026783-77C3-4053-A48F-62043BBF95A1"
     }
   ]

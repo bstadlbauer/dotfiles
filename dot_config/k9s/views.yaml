@@ -19,4 +19,12 @@ views:
       - MEM|W 
       - '%MEM/R|W' 
       - '%MEM/L|W' 
+  batch/v1/jobs:
+    columns:
+      - NAME
+      - COMPLETIONS
+      - VALID|S
+      - FAILED|S
+      - DURATION
+      - AGE
 

@@ -24,7 +24,6 @@ views:
       - NAME
       - COMPLETIONS
       - VALID|S
-      - FAILED|S
       - DURATION
       - AGE
 

@@ -123,6 +123,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-i = 'workspace 3'
     alt-a = 'workspace 4'
     alt-o = 'workspace 5'
+    alt-z = 'workspace 6'
     alt-n = 'workspace 8'
     alt-m = 'workspace 9'
 
@@ -164,6 +165,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-i = ['move-node-to-workspace 3', 'workspace 3']
     alt-shift-a = ['move-node-to-workspace 4', 'workspace 4']
     alt-shift-o = ['move-node-to-workspace 5', 'workspace 5']
+    alt-shift-z = ['move-node-to-workspace 6', 'workspace 5']
     alt-shift-n = ['move-node-to-workspace 8', 'workspace 8']
     alt-shift-m = ['move-node-to-workspace 9', 'workspace 9']
 

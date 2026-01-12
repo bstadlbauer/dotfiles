@@ -248,6 +248,11 @@ automatically-unhide-macos-hidden-apps = false
     if.app-id = 'md.obsidian'
     run = 'move-node-to-workspace 9'
 
+[[on-window-detected]]
+    if.app-name-regex-substring = 'KeePassXC'
+    if.window-title-regex-substring = 'Browser Access Request'
+    run = 'layout floating'
+
 [workspace-to-monitor-force-assignment]
 # Example:
 #    1 = 1                            # Monitor sequence number from left to right. 1-based indexing

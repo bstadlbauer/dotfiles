@@ -248,10 +248,11 @@ automatically-unhide-macos-hidden-apps = false
     if.app-id = 'md.obsidian'
     run = 'move-node-to-workspace 9'
 
+# Some KeePass windows (such as browser access request) are floating
+# but are immideatyly pushed to the background
 [[on-window-detected]]
     if.app-name-regex-substring = 'KeePassXC'
-    if.window-title-regex-substring = 'Browser Access Request'
-    run = 'layout floating'
+    run = 'layout tiling'
 
 [workspace-to-monitor-force-assignment]
 # Example:

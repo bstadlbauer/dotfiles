@@ -1,0 +1,40 @@
+time-format = "%Y-%m-%d %T.%3N"
+
+[fields]
+ignore = ["_*"]
+hide = [
+  "logging.googleapis.com/labels",
+  "logging.googleapis.com/trace",
+  "logging.googleapis.com/spanId",
+  "logging.googleapis.com/trace_sampled",
+]
+
+[fields.predefined]
+time.names = ["time", "timestamp", "@timestamp", "Timestamp", "TIMESTAMP"]
+time.show = "always"
+message.names = ["message", "msg", "MESSAGE"]
+caller.names = ["logging.googleapis.com/sourceLocation.function"]
+caller-file.names = ["logging.googleapis.com/sourceLocation.file"]
+caller-line.names = ["logging.googleapis.com/sourceLocation.line"]
+
+# Standard level field names
+[[fields.predefined.level.variants]]
+names = ["level", "LEVEL", "Level"]
+
+[fields.predefined.level.variants.values]
+error = ["error", "err", "fatal", "critical", "panic"]
+warning = ["warning", "warn"]
+info = ["info", "information"]
+debug = ["debug"]
+trace = ["trace"]
+
+# Google Cloud Logging severity field (string names + Python "Level N" format)
+[[fields.predefined.level.variants]]
+names = ["severity"]
+
+[fields.predefined.level.variants.values]
+error = ["ERROR", "CRITICAL", "ALERT", "EMERGENCY", "Level 40", "Level 50"]
+warning = ["WARNING", "Level 30"]
+info = ["INFO", "NOTICE", "Level 20", "Level 25"]
+debug = ["DEBUG", "Level 10"]
+trace = ["DEFAULT", "Level 0"]

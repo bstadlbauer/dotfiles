@@ -1,24 +1,16 @@
 plugins:
-    jqlogs:
-      shortCut: Ctrl-J
-      confirm: false
-      description: "Logs (jq)"
-      scopes:
-        - pod
+    jsonLogs:
       command: sh
-      background: false
       args:
         - -c
-        - "kubectl logs -f $NAME -n $NAMESPACE --context $CONTEXT | jq -R '. as $line | try (fromjson | \"\\(.severity):
-  \\(.message)\") catch $line'"
-    jqlogsmultiline:
+        - kubectl logs --follow --timestamps --context="$CONTEXT" --namespace="$NAMESPACE" "$RESOURCE_NAME/$NAME" | sed -u 's/^\([^ ]*\) {/{"time":"\1",/' | hl --paging=never -e -x always; echo "--- Logs ended. Press Ctrl+C to exit. ---"; sleep infinity
+      description: Prettified json logs
+      scopes:
+        - daemonset
+        - deploy
+        - job
+        - pod
+        - replicaset
+        - service
+        - statefulset
       shortCut: Ctrl-L
-      confirm: false
-      description: "Logs (JSON)"
-      scopes:
-        - pod
-      command: sh
-      background: false
-      args:
-        - -c
-        - "kubectl logs -f $NAME -n $NAMESPACE --context $CONTEXT |jq -SR '. as $line | try (fromjson) catch $line'"

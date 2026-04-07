@@ -83,7 +83,7 @@ automatically-unhide-macos-hidden-apps = false
     # (like in i3)
     alt-p = '''exec-and-forget osascript -e '
     tell application "iTerm"
-        create window with profile "temporary_terminal"
+        create window with profile "bstadlbauer"
     end tell'
     '''
 
@@ -234,11 +234,6 @@ automatically-unhide-macos-hidden-apps = false
     if.app-id = 'us.zoom.xos'
     if.window-title-regex-substring = 'Zoom Meeting'
     run = 'move-node-to-workspace 4'
-
-[[on-window-detected]]
-    if.app-id = 'com.googlecode.iterm2'
-    if.window-title-regex-substring = 'main-iterm-window'
-    run = 'move-node-to-workspace 5'
 
 [[on-window-detected]]
     if.app-id = 'com.tinyspeck.slackmacgap'

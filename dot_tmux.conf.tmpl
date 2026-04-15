@@ -1,11 +1,10 @@
-{{ if eq .chezmoi.os "darwin" }}
-  set -g prefix C-a
-  unbind C-b
-  bind C-a send-prefix
-  
-  # Beginning of a line
-  bind a send-prefix
-{{ end }}
+set -g prefix C-a
+unbind C-b
+bind C-a send-prefix
+
+# Beginning of a line
+bind a send-prefix
+
 # Clear history with k
 bind C-k clear-history
 

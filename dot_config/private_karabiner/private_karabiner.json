@@ -4,19 +4,6 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Open Slack on option+s",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "s",
-                                    "modifiers": { "mandatory": ["option"] }
-                                },
-                                "to": [{ "software_function": { "open_application": { "file_path": "/Applications/Slack.app" } } }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Post Esc if Caps is tapped, Control if held.",
                         "manipulators": [
                             {

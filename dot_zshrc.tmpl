@@ -120,6 +120,8 @@ export LC_ALL=en_US.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias n="nvim"
 alias lg="lazygit"
+alias xri='uv run --with xarray --with zarr -- python -c "import xarray, sys; print(xarray.open_zarr(sys.argv[1], consolidated=False))"'
+alias c='claude'
 
 # Locale
 export LC_ALL=en_US.UTF-8

@@ -27,6 +27,7 @@ return {
     },
     opts = {
       defaults = {
+        formatter = { "path.filename_first", 2 },
         -- Change keybindings for fzf actions
         actions = {
           -- Use Ctrl-h instead of Alt-h for toggle hidden files

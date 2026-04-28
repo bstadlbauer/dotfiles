@@ -39,6 +39,11 @@ return {
                 "source.fixAll.ruff",
               },
             }
+            -- Defer hover, references, and rename to basedpyright
+            client.server_capabilities.hoverProvider = false
+            client.server_capabilities.referencesProvider = false
+            client.server_capabilities.renameProvider = false
+            client.server_capabilities.definitionProvider = false
           end,
         },
       },

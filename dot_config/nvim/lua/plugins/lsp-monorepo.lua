@@ -5,13 +5,11 @@ return {
       servers = {
         -- For Python monorepos with basedpyright
         basedpyright = {
-          root_dir = function(fname)
+          root_dir = function(bufnr, on_dir)
             local util = require("lspconfig.util")
-            -- Look for the monorepo root by finding common monorepo markers
-            -- Adjust these patterns based on your monorepo structure
+            local fname = vim.api.nvim_buf_get_name(bufnr)
             local root = util.root_pattern("uv.lock")(fname)
-            -- If no root found, fall back to current working directory
-            return root or vim.fn.getcwd()
+            on_dir(root or vim.fn.getcwd())
           end,
           settings = {
             basedpyright = {
